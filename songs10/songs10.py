@@ -1,5 +1,4 @@
 import requests  as rq
-import clipboard as pc
 
 # checking if api key exists in the data.txt file
 with open("data.txt", "r+") as data:
