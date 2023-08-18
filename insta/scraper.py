@@ -22,8 +22,15 @@ headers = {
 response = requests.get(url, headers=headers, params=querystring).json()
 
 
+try:
+	bio = response[0]["bio_links"]["url"]
+except KeyError:
+	bio = ""
+	
 print(f"""
---------------------------------------------------------\n
+      
+--------------------------------------------------------
+      
 Full Name : {response[0]["full_name"]}
 Username : {response[0]["username"]}
 Follower Count : {response[0]["follower_count"]}
@@ -31,7 +38,7 @@ Following Count : {response[0]["following_count"]}
 Pronouns : {response[0]["pronouns"]}
 
 Bio : {response[0]["biography"]}
-Bio Links : {response[0]["bio_links"]}
+Bio Links : {bio}
 
 New to Instagram : {response[0]["is_new_to_instagram"]}
 Private : {response[0]["is_private"]}
@@ -43,5 +50,7 @@ Media Count : {response[0]["media_count"]}
 
 Profile Pic URL : {response[0]["profile_pic_url"]}\n
 HD Profile Pic URL : {response[0]["profile_pic_url_hd"]}\n
+
 --------------------------------------------------------
+
 """)
