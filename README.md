@@ -54,6 +54,5 @@ Replace `<file_name>.py` with the name of the script you want to run.
 Here are some of the scripts available in this repository:
 
 1. `songs10.py`: Prints today's top 10 songs.
-
-[//]: # (2. `script2.py`: Description of what this script does.)
+2. `scraper.py`: Scrapes insta user's data.
 [//]: # (3. ...)
