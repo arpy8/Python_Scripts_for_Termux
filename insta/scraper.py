@@ -22,10 +22,10 @@ headers = {
 response = requests.get(url, headers=headers, params=querystring).json()
 
 
-print(f"""\n
+print(f"""
+-------------------------------------------------------------------\n
 Username : {response[0]["username"]}
 Full Name : {response[0]["full_name"]}
-
 Follower Count : {response[0]["follower_count"]}
 Following Count : {response[0]["following_count"]}
 
@@ -41,4 +41,5 @@ New to Instagram : {response[0]["is_new_to_instagram"]}
 
 Profile Pic URL : {response[0]["profile_pic_url"]}\n
 HD Profile Pic URL : {response[0]["profile_pic_url_hd"]}\n
+-------------------------------------------------------------------
 """)
